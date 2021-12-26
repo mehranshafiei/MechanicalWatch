@@ -1,10 +1,13 @@
 import QtQuick 2.0
 
 Item {
-    id: tickMark
-        property alias angle: roatation.angle
+    id: root
+    property real angle: roatation.angle
 
-    anchors.topMargin: parent.height / 100
+    // This margin is the margin between the inner-most part
+    // of the tickmark and face circle
+//    anchors.topMargin: parent.height / 100
+
     anchors.top: parent.top
     x: (parent.width / 2) - (width / 2)
 
@@ -15,8 +18,8 @@ Item {
     transform: Rotation {
         id: roatation
         origin.x: 0;
-        origin.y: tickMark.height;
-        angle: 0
+        origin.y: root.height;
+        angle: root.angle
     }
 
     Rectangle {

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
-project(MechanicalWatch LANGUAGES CXX)
+project(MechanicalWatch VERSION 1.0.0 LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
